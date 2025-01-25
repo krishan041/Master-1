@@ -4,7 +4,7 @@ services:
     plan: free
     env: docker
     dockerfilePath: Dockerfile
-    repo: https://github.com/AnkitShakya95/DRM-Bot-2.git-for-render
+    repo: https://github.com/krishan041/Master-1
     branch: main
     autoDeploy: false
     envVars:
@@ -17,4 +17,4 @@ services:
       - key: WEBHOOK
         sync: false
       - key: PORT
-        sync: true   # Default port value, update if needed￼Enter
+        sync: false  # Default port value, update if needed￼Enter
