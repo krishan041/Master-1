@@ -1,11 +1,18 @@
-from config import Config
 from pyrogram import Client as bot, idle
 import asyncio
 import logging
 from flask import Flask
+from config import Config  # Import Config class here
 
 app = Flask(__name__)
-app.config.from_object(Config)
+app.config.from_object(Config)  # Apply the config to the app
+
+@app.route('/')
+def home():
+    return "Hello, World!"
+
+if __name__ == '__main__':
+    app.run(debug=True)
 
 logging.basicConfig(
     level=logging.INFO,    
